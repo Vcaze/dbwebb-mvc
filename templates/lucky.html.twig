@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Magic number{% endblock %}
+
+{# {% block javascripts %}
+    <script src="{{ asset('build/lucky.js') }}"></script>
+{% endblock %} #}
+
+{% block main %}
+    <div class="page-header content-box">
+        <h1>Lucky</h1>
+    </div>
+
+    <div class="multiplication">
+        <div class="factor factor-one">
+            <div class="number-container factor-one-first"></div>
+            <div class="number-container factor-one-second"></div>
+        </div>
+
+        <div class="sign-container times"></div>
+
+        <div class="factor factor-two">
+            <div class="number-container factor-two-first"></div>
+            <div class="number-container factor-two-second"></div>
+        </div>
+
+        <div class="sign-container equals"></div>
+
+        <div class="product">
+            <div class="number-container product-first"></div>
+            <div class="number-container product-second"></div>
+            <div class="number-container product-third"></div>
+        </div>
+    </div>
+{% endblock %}
