@@ -28,6 +28,7 @@ composer install
 ```
 php -S localhost:8888 -t public
 ```
+The website is then available at http://localhost:8888/
 
 ## Contact
 Viktor Nordenberg - viktor.nordenberg1@gmail.com
