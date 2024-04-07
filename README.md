@@ -4,7 +4,7 @@
 ![Symfony logo](https://symfony.com/logos/symfony_black_02.svg)
 
 ## Description
-This project is the report website for Viktor Nordenberg in the course Objektorienterade webbteknologier at Blekinge Tekniska Högskola. The website is created with the open-source PHP framework Symfony and uses on an MVC framework.
+This project is the report website for Viktor Nordenberg in the course Objektorienterade webbteknologier at Blekinge Tekniska Högskola. The website is created with the open-source PHP framework Symfony and uses an MVC framework.
 
 ## Getting started
 
@@ -31,4 +31,5 @@ php -S localhost:8888 -t public
 
 ## Contact
 Viktor Nordenberg - viktor.nordenberg1@gmail.com
+
 GitHub projekt - https://github.com/Vcaze/dbwebb-mvc
