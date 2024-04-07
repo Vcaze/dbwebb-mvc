@@ -86,7 +86,7 @@ footer {
 }
 
 .footer-col {
-
+    height: 100%;
 }
 
 .footer-col1 {
@@ -191,15 +191,11 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    color: #000;
 }
 
 .about-container .link-box {
     
-}
-
-.link-box {
-    display: inline-block;
-    color: #000;
 }
 
 .link-box:hover {
@@ -274,6 +270,11 @@ footer .link-box {
     animation: zoomIn 1s forwards;
 }
 
+.moving {
+    position: relative;
+    animation: spin 3.5s linear infinite, moveUpDown 3.5s ease-in-out infinite;
+}
+
 @keyframes zoomIn {
     0% {
         transform: scale(1);
@@ -284,6 +285,16 @@ footer .link-box {
     100% {
         transform: scale(1);
     }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes moveUpDown {
+    0%, 100% { top: 0; }
+    50% { top: 200px; }
 }
 
 .report-container {
@@ -301,5 +312,3 @@ footer .link-box {
 .report p {
     margin-top: 1rem;    
 }
-
-

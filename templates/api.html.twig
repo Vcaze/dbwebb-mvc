@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+    <div class="page-header content-box">
+        <h1>Tillgängliga API routes</h1>
+    </div>
+
+    <div class="api-routes content-box">
+        <ul>
+            {% for route in routes %}
+                <li><a href="api/{{ route }}">{{ route }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

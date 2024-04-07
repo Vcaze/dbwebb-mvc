@@ -46,6 +46,10 @@ addImageToDiv(productString[0], "product-first");
 addImageToDiv(productString[1], "product-second");
 addImageToDiv(productString[2], "product-third");
 
+// Make the container div spin and move up and down
+const multiplicationDiv = document.getElementsByClassName("multiplication")[0];
+multiplicationDiv.classList.add("moving");
+
 // Function to add the image for a number or a sign to a div
 function addImageToDiv(number, divClassName) {
     const div = document.getElementsByClassName(divClassName)[0];

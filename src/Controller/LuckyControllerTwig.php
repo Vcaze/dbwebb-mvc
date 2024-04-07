@@ -8,12 +8,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LuckyControllerTwig extends AbstractController
 {
-    #[Route("/lucky", name: "lucky")]
-    public function lucky(): Response
-    {
-        return $this->render('lucky.html.twig');
-    }
-
     #[Route("/", name: "home")]
     public function home(): Response
     {
@@ -30,5 +24,23 @@ class LuckyControllerTwig extends AbstractController
     public function report(): Response
     {
         return $this->render('report.html.twig');
+    }
+
+    #[Route("/lucky", name: "lucky")]
+    public function lucky(): Response
+    {
+        return $this->render('lucky.html.twig');
+    }
+
+    #[Route("/api", name: "api")]
+    public function api(): Response
+    {
+        $jsonFile = file_get_contents($this->getParameter('kernel.project_dir') . '/public/data/api_routes.json');
+        
+        $routes = json_decode($jsonFile, true)['routes'];
+ 
+        return $this->render('api.html.twig', [
+             'routes' => $routes,
+        ]);
     }
 }
