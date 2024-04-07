@@ -32,4 +32,4 @@ php -S localhost:8888 -t public
 ## Contact
 Viktor Nordenberg - viktor.nordenberg1@gmail.com
 
-GitHub projekt - https://github.com/Vcaze/dbwebb-mvc
+GitHub project - https://github.com/Vcaze/dbwebb-mvc
