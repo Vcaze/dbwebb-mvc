@@ -1,7 +1,6 @@
 console.log("lucky.js started");
-console.info("lucky.js started");
 
-const imgPath = "../../img/";
+const imgPath = "img/";
 
 const numberFilenames = [
     "zero.png",
@@ -60,9 +59,6 @@ function addImageToDiv(number, divClassName) {
 }
 
 // debugging
-console.log("lucky.js is being run fully");
+console.log("lucky.js done");
 
-console.log("fac 1: " + factorOne);
-console.log("fac 2: " + factorTwo);
-console.log("prod: " + product);
-console.log("imgpath: " + imgPath + "one");
+console.log("imgpath: " + imgPath + "one.png");

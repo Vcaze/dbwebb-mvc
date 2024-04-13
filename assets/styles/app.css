@@ -267,7 +267,7 @@ footer .link-box {
 }
 
 .zoom-in {
-    animation: zoomIn 1s forwards;
+    animation: zoomIn 2s forwards;
 }
 
 .moving {
@@ -280,7 +280,7 @@ footer .link-box {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.4);
     }
     100% {
         transform: scale(1);

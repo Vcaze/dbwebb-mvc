@@ -6,7 +6,6 @@
  * which should already be in your base.html.twig.
  */
 import './styles/app.css';
-// import './js/lucky.js';
+import './js/lucky.js';
 
-console.log("app.js being run correctly");
-
+console.log("app.js done");
