@@ -8,8 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpKernel\KernelInterface;
 
-
-class LuckyControllerJson extends AbstractController
+class ControllerJson extends AbstractController
 {
     private $kernel;
 

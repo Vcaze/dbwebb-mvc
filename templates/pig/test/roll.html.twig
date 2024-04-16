@@ -1,0 +1,11 @@
+{% block main %}
+<h1>Roll dice</h1>
+
+<p>Here is the value of the dice.</p>
+
+<ul>
+    {% for diceString in diceStrings %}
+    <li>{{ diceString }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

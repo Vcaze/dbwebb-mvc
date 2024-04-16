@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+<div class="page-header content-box">
+    <h1>Session</h1>
+</div>
+
+{{ include('flash.html.twig') }}
+
+<div class="content-box session">
+    {% for key, value in sessionData %}
+    <div class="single-session-data">
+        <p>Nyckel: {{ key }}</p>
+        <p>Värde: {{ value }}</p>
+    </div>
+    {% endfor %}
+
+    {% if sessionData|length == 0 %}
+    <div class="single-session-data">
+        <h4>Session är tom</h4>
+    </div>
+    {% endif %}
+
+    <a href="{{ path('session_delete') }}" class="button">Radera allt i session</a>
+</div>
+
+{% endblock %}

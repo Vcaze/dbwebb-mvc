@@ -1,5 +1,8 @@
 {
-    "routes": [
-      "quote"
-    ]
+    "routes": {
+        "/quote": "Ett slumpmässigt citat",
+        "/deck": "Kortlek",
+        "/deck/shuffle": "Blandar och visar kortleken",
+        "/deck/draw": "Drar och visar kort från kortleken"
+    } 
 }

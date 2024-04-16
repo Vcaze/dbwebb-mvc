@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+<div class="page-header content-box">
+    <h1>Dragna kort</h1>
+</div>
+
+{{ include('flash.html.twig') }}
+
+<div class="content-box">
+    <h3>Antal kort kvar i leken: {{ numCardsRemaining }}</h3>
+    <div class="card-deck">
+        {% for index, cardChar in cardsChars %}
+        <div class="card {{ cardsSuits[index] }}">{{ cardChar|raw }}</div>
+        {% endfor %}
+</div>
+</div>
+
+{% endblock %}

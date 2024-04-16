@@ -1,8 +1,10 @@
 :root {
     --dark-color: #CC6600;
     --light-color: #FFFBD0;
-    --black-hover: #3f3f3f;
+    --black-hover: rgb(48, 48, 48);
     --margin-boxes: 1.3rem;
+    --black: rgb(24, 24, 24);
+    --black-lighter: rgb(32, 32, 32);
 }
 
 * {
@@ -303,4 +305,107 @@ footer .link-box {
 
 .report p {
     margin-top: 1rem;    
+}
+
+.flash-notice {
+    padding: 0.5em;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    margin: 2rem;
+}
+.flash-notice:before {
+    content: "ⓘ";
+}
+
+.flash-warning {
+    padding: 0.5em;
+    color: #fff;
+    background-color: #dd6b57;
+    border-color: #c94e38;
+    margin: 2rem;
+}
+.flash-warning:before {
+    content: "⚠";
+}
+
+.die {
+    font-size: 2rem;
+}
+
+.card {
+    font-size: 6rem;
+    margin: 0.3rem;
+}
+
+.card-deck {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    margin: 0 1.2rem;
+}
+
+.spades, .clubs {
+    color: black;
+}
+
+.hearts, .diamonds {
+    color: red;
+}
+
+.button {
+    color: white;
+    /* background-color: var(--black-hover); */
+    background-image: linear-gradient(var(--black), var(--black-lighter));
+    border: none;
+    border-radius: 0.7rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 0.4rem 1rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.button:hover {
+    background-color: var(--black-hover);
+    background-image: var(--black-hover);
+    cursor: pointer;
+    transform: scale(1.06);
+}
+
+.card-links .button {
+    width: 15rem;
+    margin: 2rem auto;
+}
+
+.card-links {
+    margin: 0 8rem;
+}
+
+.single-session-data {
+    margin-bottom: 2rem;
+    border: 2px solid var(--black);
+    border-radius: 0.8rem;
+    padding: 0.5rem;
+}
+
+.session-link {
+    color: var(--black);
+}
+
+.api-routes {
+
+}
+
+.api-link {
+    margin: 1rem 8rem;
+    width: 23rem;
+    text-align: left;
+    justify-content: left;
 }

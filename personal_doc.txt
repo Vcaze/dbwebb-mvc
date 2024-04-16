@@ -1,0 +1,6 @@
+For dice game:
+src/DiceGameController.php + routes
+templates/pig/home.html.twig
+src/Dice
+src/Dice/Dice.php
+

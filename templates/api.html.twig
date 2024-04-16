@@ -8,10 +8,8 @@
     </div>
 
     <div class="api-routes content-box">
-        <ul>
-            {% for route in routes %}
-                <li><a href="api/{{ route }}">{{ route }}</a></li>
-            {% endfor %}
-        </ul>
+        {% for route, description in routes %}
+        <a href="api{{ route }}" class="button api-link">{{ route }} - {{ description }}</a>
+        {% endfor %}
     </div>
 {% endblock %}
