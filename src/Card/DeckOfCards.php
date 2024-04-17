@@ -56,7 +56,7 @@ class DeckOfCards
 
     public function sort(): void
     {
-        usort($this->deck, function($cardA, $cardB){
+        usort($this->deck, function ($cardA, $cardB) {
             return strcmp($cardA->getUnicodeChar(), $cardB->getUnicodeChar());
         });
     }

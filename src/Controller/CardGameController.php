@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 // use App\Card\Card;
 // use App\Card\CardHand;
 use App\Card\DeckOfCards;
+
 // use App\Card\DeckOfCardsJokers;
 
 class CardGameController extends AbstractController
@@ -24,11 +25,10 @@ class CardGameController extends AbstractController
     #[Route("/card/deck", name: "deck")]
     public function deck(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         // get the deck
         $deck = $session->get("deck");
-        
+
         if ($deck === null) {
             $deck = new DeckOfCards();
             $session->set("deck", $deck);
@@ -54,11 +54,10 @@ class CardGameController extends AbstractController
     #[Route("/card/shuffle", name: "shuffle_deck")]
     public function shuffleDeck(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         // get the deck
         $deck = $session->get("deck");
-        
+
         if ($deck === null) {
             $deck = new DeckOfCards();
             $session->set("deck", $deck);
@@ -85,11 +84,10 @@ class CardGameController extends AbstractController
     public function draw(
         int $numCards,
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         // get the deck
         $deck = $session->get("deck");
-        
+
         if ($deck === null) {
             $deck = new DeckOfCards();
             $session->set("deck", $deck);

@@ -13,20 +13,19 @@ use App\Card\DeckOfCards;
 
 class CardGameControllerJson extends AbstractController
 {
-//     private $kernel;
-// 
-//     public function __construct(KernelInterface $kernel)
-//     {
-//         $this->kernel = $kernel;
-//     }
+    //     private $kernel;
+    //
+    //     public function __construct(KernelInterface $kernel)
+    //     {
+    //         $this->kernel = $kernel;
+    //     }
 
     #[route("/api/deck")]
     public function deck(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $deck = $session->get("deck");
-        
+
         if ($deck === null) {
             $deck = new DeckOfCards();
             $session->set("deck", $deck);
@@ -59,10 +58,9 @@ class CardGameControllerJson extends AbstractController
     #[route("/api/deck/shuffle")]
     public function shuffleDeck(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $deck = $session->get("deck");
-        
+
         if ($deck === null) {
             $deck = new DeckOfCards();
             $session->set("deck", $deck);
@@ -96,10 +94,9 @@ class CardGameControllerJson extends AbstractController
     public function draw(
         int $numCards,
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $deck = $session->get("deck");
-        
+
         if ($deck === null) {
             $deck = new DeckOfCards();
             $session->set("deck", $deck);
