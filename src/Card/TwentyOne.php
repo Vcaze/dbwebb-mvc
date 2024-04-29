@@ -6,10 +6,25 @@ use App\Card\DeckOfCards;
 
 class TwentyOne
 {
+    /**
+     * @var DeckOfCards
+     */
     private $deck;
+    /**
+     * @var array
+     */
     private $cardsDrawn = [];
+    /**
+     * @var int
+     */
     private $playerScore;
+    /**
+     * @var int
+     */
     private $bankScore;
+    /**
+     * @var string
+     */
     private $status;
 
     public function __construct()

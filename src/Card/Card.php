@@ -4,10 +4,21 @@ namespace App\Card;
 
 class Card
 {
+    /**
+     * @var string
+     */
     private $unicodeChar;
+    /**
+     * @var string
+     */
     private $suit;
+    /**
+     * @var string
+     */
     private $rank;
-
+    /**
+     * @var int
+     */
     private $rankInt;
 
     public function __construct(string $unicodeChar, string $suit, string $rank)
@@ -42,7 +53,7 @@ class Card
         return $this->unicodeChar;
     }
 
-    public function getSuit($lowercase = true): string
+    public function getSuit(bool $lowercase = true): string
     {
         return $lowercase ? strtolower($this->suit) : $this->suit;
     }

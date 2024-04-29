@@ -6,6 +6,9 @@ use App\Card\Card;
 
 class CardHand
 {
+    /**
+     * @var array
+     */
     private $hand = [];
 
     public function add(Card $card): void
