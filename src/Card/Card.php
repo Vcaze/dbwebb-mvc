@@ -42,9 +42,9 @@ class Card
         return $this->unicodeChar;
     }
 
-    public function getSuit(): string
+    public function getSuit($lowercase = true): string
     {
-        return $this->suit;
+        return $lowercase ? strtolower($this->suit) : $this->suit;
     }
 
     public function getRank(): string

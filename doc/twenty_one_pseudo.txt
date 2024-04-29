@@ -1,0 +1,74 @@
+    
+    #######  TwentyOne pseudo code #######
+
+    ### Properties
+
+    deck - Deck
+    cardsDrawn - array of Card objects. the cards drawn by the player.
+    score - int. player score
+    status - string. the status of the game
+
+    ### Methods
+
+    # __construc()
+    Assign a Deck object to deck
+    Set score to 0
+    Set status to "play"
+
+    # draw(returnOneCard)
+    - Draw a card from the deck. Return the card or all drawn cards.
+    Call this->deck->draw() object to draw a card from it
+    Call this->scoreCard(card)
+    Add card to this->cardsDrawn
+    IF returnOneCard
+        RETURN card
+    ELSE
+    RETURN this->cardsDrawn
+    ENDIF
+    
+    # scoreCard(card)
+    - Score a card.
+    Call card->getRankInt() to get the int value of the card
+    IF cardValue is 1 AND score + 14 is 21 or less
+        Set cardValue to 14
+    END IF
+    Set score to score + cardValue
+    IF score is greater than 21
+        Set score to 0
+    END IF
+    Set this->score to score
+
+    # autoPlay()
+    - Play the full game for the bank. Returns an array of all it's turns with cards and score.
+    Create array for data of all the rounds (cards drawn) by the bank
+    Set score to 0
+    WHILE score is less than 15
+        Call this->draw(returnOneCard = true) to get a card
+        Add an associative array to to the rounds data array with:
+            card = card
+            score = Call this->scoreCard(card)
+    END WHILE
+    RETURN rounds data array
+
+
+    # getScore()
+    - Get the player's score.
+
+    # getCardsDrawn()
+    - Get the player's cards drawn.
+
+    # setStatus()
+    - Set the status of the game.
+
+    # getStatus()
+    - Get the status of the game.
+
+    #reset()
+    - Reset the game.
+    Call this->deck->reset()
+    Set this->score to 0
+    Set this->cardsDrawn to empty array
+    Set this->status to "play"
+
+
+

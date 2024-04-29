@@ -3,6 +3,7 @@
         "/quote": "Ett slumpmässigt citat",
         "/deck": "Kortlek",
         "/deck/shuffle": "Blandar och visar kortleken",
-        "/deck/draw": "Drar och visar kort från kortleken"
+        "/deck/draw": "Drar och visar kort från kortleken",
+        "/game": "Se ställningen i det nuvarande spelet av tjugoett"
     } 
 }

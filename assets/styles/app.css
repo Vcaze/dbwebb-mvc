@@ -5,6 +5,8 @@
     --margin-boxes: 1.3rem;
     --black: rgb(24, 24, 24);
     --black-lighter: rgb(32, 32, 32);
+    --gray:  rgb(51, 51, 51);
+    --font-white: #fff;
 }
 
 * {
@@ -408,4 +410,149 @@ footer .link-box {
     width: 23rem;
     text-align: left;
     justify-content: left;
+}
+
+.twenty-one-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.twenty-one-game-info {
+    width: 100%;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.twenty-one-game-info .button {
+    margin-bottom: 1rem;
+}
+
+.twenty-one-game-info .info-left-col {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.twenty-one-game-info .info-right-col {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.twenty-one-game-info .score {
+    background-color: var(--gray);
+    border-radius: 0.7rem;
+    padding: 0.6rem;
+    text-align: left;
+    color: var(--font-white);
+}
+
+.twenty-one-game-info .draw-button {
+    width: 10rem;
+}
+
+.twenty-one-game-info .stay-button {
+    width: 10rem;
+}
+
+.twenty-one-game-info .bank-play-button {
+    width: 10rem;
+}
+
+.twenty-one-game-info .new-game-button {
+    width: 10rem;
+}
+
+.twenty-one-card-areas-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.twenty-one-card-areas-container .your-cards {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.twenty-one-card-areas-container .bank-cards {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.twenty-one-card-areas-container .your-cards-cards {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 0 2rem;
+}
+
+.twenty-one-card-areas-container h3 {
+    text-align: center;
+}
+
+.twenty-one-card-areas-container .bank-cards-cards {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 0 2rem;
+}
+
+.twenty-one-rules {
+    margin-bottom: 2rem;
+    max-width: 34rem;
+}
+
+.twenty-one-rules h3 {
+    text-align: center;
+}
+
+.twenty-one-rules p {
+    margin-top: 0.7rem;
+}
+
+.twenty-one-pseudo, .twenty-one-flowchart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.twenty-one-flowchart {
+    margin-top: 2rem;
+}
+
+.twenty-one-pseudo img {
+    width: 40rem;
+    margin: 1rem;
+}
+
+.twenty-one-flowchart img {
+    width: 30rem;
+    margin: 1rem;
+}
+
+.twenty-one-home-buttons .button {
+    margin-bottom: 1rem;
+}
+
+.twenty-one-home-buttons .button:last-child {
+    margin-bottom: 0;
 }

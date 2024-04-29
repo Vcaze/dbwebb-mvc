@@ -7,7 +7,7 @@ use phpDocumentor\Reflection\Types\Void_;
 
 class DeckOfCards
 {
-    private $deck = [];
+    protected $deck = [];
 
     public function __construct()
     {

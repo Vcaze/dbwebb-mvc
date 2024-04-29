@@ -1,0 +1,55 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+<div class="page-header content-box">
+    <h1>Tjugoett</h1>
+</div>
+
+{{ include('flash.html.twig') }}
+
+<div class="content-box twenty-one-container">
+    <div class="twenty-one-game-info">
+        <div class="info-left-col">
+            <div class="score">
+                <p>Din poäng: {{ playerScore }}</p>
+                <p>Bankens poäng: {{ bankScore }}</p>
+            </div>
+        </div>
+
+        <div class="info-right-col">
+            <form method="post" action="">
+                {% if status == "play" %}
+                <input type="submit" name="draw" value="Dra ett kort" onClick="this.form.action='{{ path('twenty_one_draw') }}';" class="draw-button button">
+                <input type="submit" name="stay" value="Stanna" onClick="this.form.action='{{ path('twenty_one_stay') }}';" class="stay-button button">
+                {% elseif status == "stay" %}
+                <input type="submit" name="bank_play" value="Bankens tur" onClick="this.form.action='{{ path('twenty_one_bank_play') }}';" class="bank-play-button button">
+                {% elseif status == "finished" %}
+                <input type="submit" name="new_game" value="Ny omgång" onClick="this.form.action='{{ path('twenty_one_init') }}';" class="new-game-button button">
+                {% endif %}
+            </form>
+        </div>
+    </div>
+
+    <div class="twenty-one-card-areas-container">
+        <div class="your-cards">
+            <h3>Dina kort</h3>
+            <div class="your-cards-cards">
+                {% for card in playerCards %}
+                <div class="card {{ card.getSuit() }}">{{ card.getUnicodeChar()|raw }}</div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+        <div class="bank-cards">
+            <h3>Bankens kort</h3>
+            <div class="bank-cards-cards">
+                {% for round in bankPlayData %}
+                <div class="card {{ round.card.getSuit() }}">{{ round.card.getUnicodeChar()|raw }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

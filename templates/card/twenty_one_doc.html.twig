@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+<div class="page-header content-box">
+    <h1>Tjugoett dokumentaion</h1>
+</div>
+
+{{ include('flash.html.twig') }}
+
+<div class="content-box">
+    <div class="twenty-one-pseudo">
+        <h3>Pseudokod</h3>
+        <img src="{{ asset('img/twenty_one_pseudo.png') }}" alt="Pseudokod">
+    </div>
+
+    <div class="twenty-one-flowchart">
+        <h3>Flödesschema</h3>
+        <img src="{{ asset('img/twenty_one_flowchart.jpg') }}" alt="Flödesschema">
+    </div>
+</div>
+
+
+{% endblock %}

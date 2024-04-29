@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+<div class="page-header content-box">
+    <h1>Tjugoett</h1>
+</div>
+
+{{ include('flash.html.twig') }}
+
+<div class="content-box">
+    <div class="twenty-one-rules">
+        <h3>Regler</h3>
+
+        <p>Kortspelet Tjugoett går ut på att dra kort tills värden av dem är så nära 21 som möjligt utan att överstiga 21. Man drar ett kort i taget och kan efter varje kort välja om man vill fortsätta dra ett till eller stanna på den poäng man har. Överstiger kortsumman 21 så får man 0 poäng och banken vinner. När man har stannat på en poäng så spelar banken på samma sätt. Om det blir lika vinner banken.</p>
+        <p>1-10 är värda dess värde.</p>
+        <p>Knekt, Dam och Kung är värda 11, 12 respektive 13.</p>
+        <p>Ess kan användas som både 1 och 14.</p>
+    </div>
+
+    <div class="twenty-one-home-buttons">
+        <a href="{{ path('twenty_one_init') }}" class="button">Spela</a>
+
+        <a href="{{ path('twenty_one_doc') }}" class="button">Dokumentaion</a>
+    </div>
+</div>
+
+
+{% endblock %}

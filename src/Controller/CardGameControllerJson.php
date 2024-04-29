@@ -10,6 +10,7 @@ use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 use App\Card\DeckOfCards;
+use App\Card\TwentyOne;
 
 class CardGameControllerJson extends AbstractController
 {
@@ -119,6 +120,29 @@ class CardGameControllerJson extends AbstractController
             'cardsRemaning' => $deck->getNumberCards(),
         ];
         // $cardsEncoded = json_encode($cards);
+
+        $response = new JsonResponse($data);
+
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
+        return $response;
+    }
+
+    #[route("/api/game")]
+    public function game(
+        SessionInterface $session
+    ): Response {
+        $TwentyOne = $session->get("twenty_one");
+
+        if ($TwentyOne === null) {
+            $TwentyOne = new TwentyOne();
+        }
+
+        $data = [
+            'playerScore' => $TwentyOne->getPlayerScore(),
+            'bankScore' => $TwentyOne->getBankScore(),
+        ];
 
         $response = new JsonResponse($data);
 

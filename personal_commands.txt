@@ -11,3 +11,9 @@ bin/console cache:clear
 
 # Show available commands
 bin/console
+
+# lint analyse
+tools/phpstan/vendor/bin/phpstan analyse -l 9 src
+
+# lint through the phpstan.neon file
+tools/phpstan/vendor/bin/phpstan analyse -c tools/phpstan/phpstan.neon
