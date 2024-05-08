@@ -9,7 +9,7 @@ class TwentyOne
     /**
      * @var DeckOfCards
      */
-    private $deck;
+    public $deck;
     /**
      * @var array
      */
